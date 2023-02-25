@@ -65,9 +65,10 @@ if st.button('Predict Price'):
 X_res = int(resolution.split('x')[0])
 Y_res = int(resolution.split('x')[1])
 #ppi = ((X_res**2)+(Y_res**2))**0.5
-ppi=ram
-query = np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
+#query = np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
+query = np.array([company,type,cpu,gpu,os])
 
 # Prediksi Harga Laptop
-query = query.reshape(1,12)
+#query = query.reshape(1,12)
+query = query.reshape(1,5)
 st.title("Predicted Price in Dollar : $ " + str(int(np.exp(pipe.predict(query)[0]))))
