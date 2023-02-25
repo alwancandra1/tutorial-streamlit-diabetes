@@ -27,7 +27,7 @@ touchscreen = st.selectbox('Touchscreen',['Yes','No'])
 ips = st.selectbox('IPS',['Yes','No'])
 
 # Screensize
-screen_size = st.number_input('Screen Size')
+#screen_size = st.number_input('Screen Size')
 
 # resolution
 resolution = st.selectbox('Screen Resolution',['1366x768', '1600x900', '1920x1080', '2304x1440', '2560x1440', '2560x1600'])
@@ -63,9 +63,8 @@ if st.button('Predict Price'):
 # split nilai ppi dan query diubah ke integer
 X_res = int(resolution.split('x')[0])
 Y_res = int(resolution.split('x')[1])
-ppi = (((X_res**2)+(Y_res**2))**0.5)
-total=ppi/screen_size
-query = np.array([company,type,ram,weight,touchscreen,ips,total,cpu,hdd,ssd,gpu,os])
+ppi = ((X_res**2)+(Y_res**2))**0.5
+query = np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
 
 # Prediksi Harga Laptop
 query = query.reshape(1,12)
