@@ -18,13 +18,14 @@ type = st.selectbox('Type',df['TypeName'].unique())
 ram = st.selectbox('RAM (in GB)',[2,4,6,8,12,16,24,32,64])
 
 # Weight
-weight = st.number_input('Weight')
+#weight = st.number_input('Weight')
+weight = st.selectbox('Weight (in kg)',[2,2.10,1.75,2.40,1.40])
 
 # Touchscreen
-touchscreen = st.selectbox('Touchscreen',['1','0'])
+touchscreen = st.selectbox('Touchscreen',['Yes','No'])
 
 # IPS
-ips = st.selectbox('IPS',['1','0'])
+ips = st.selectbox('IPS',['Yes','No'])
 
 # Screensize
 #screen_size = st.number_input('Screen Size')
@@ -47,18 +48,18 @@ gpu = st.selectbox('GPU',df['Gpu Brand'].unique())
 # os
 os = st.selectbox('OS',df['os'].unique())
 
-#if st.button('Predict Price'):
+if st.button('Predict Price'):
     # query
     #ppi = None
-#    if touchscreen == 'Yes':
-#        touchscreen = 1
-#    else:
-#        touchscreen = 0
+    if touchscreen == 'Yes':
+        touchscreen = 1
+    else:
+        touchscreen = 0
 
-#    if ips == 'Yes':
-#        ips = 1
-#    else:
-#        ips = 0
+    if ips == 'Yes':
+        ips = 1
+    else:
+        ips = 0
 
 # split nilai ppi dan query diubah ke integer
 X_res = int(resolution.split('x')[0])
