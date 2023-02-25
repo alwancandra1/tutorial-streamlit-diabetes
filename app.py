@@ -18,7 +18,7 @@ type = st.selectbox('Type',df['TypeName'].unique())
 ram = st.selectbox('RAM (in GB)',[2,4,6,8,12,16,24,32,64])
 
 # Weight
-weight = st.number_input('Weight (in KG)')
+weight = st.selectbox('Weight',df['Weight'].unique())
 
 # Touchscreen
 touchscreen = st.selectbox('Touchscreen',['Yes','No'])
