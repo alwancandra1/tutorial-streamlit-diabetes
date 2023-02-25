@@ -50,7 +50,7 @@ os = st.selectbox('OS',df['os'].unique())
 
 if st.button('Predict Price'):
     # query
-    #ppi = None
+    ppi = None
     if touchscreen == 'Yes':
         touchscreen = 1
     else:
