@@ -27,7 +27,7 @@ touchscreen = st.selectbox('Touchscreen',['Yes','No'])
 ips = st.selectbox('IPS',['Yes','No'])
 
 # Screensize
-screen_size = st.number_input('Inches')
+screen_size = st.number_input('Screen Size')
 
 # resolution
 resolution = st.selectbox('Screen Resolution',['1366x768', '1600x900', '1920x1080', '2304x1440', '2560x1440', '2560x1600'])
