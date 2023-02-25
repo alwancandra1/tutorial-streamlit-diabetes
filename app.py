@@ -66,7 +66,7 @@ Y_res = int(resolution.split('x')[1])
 #ppi = ((X_res**2)+(Y_res**2))**0.5/screen_size
 ppi = ((X_res**2)+(Y_res**2))**0.5
 #query = np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
-query = np.array([ram,ram,ram,weight,touchscreen,ips,ppi,ram,hdd,ssd,ram,ram])
+query = np.array([ssd,hdd,ssd,weight,touchscreen,ips,ppi,ram,hdd,ssd,ssd,hdd])
 
 # Prediksi Harga Laptop
 query = query.reshape(1,12)
