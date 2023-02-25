@@ -47,18 +47,18 @@ gpu = st.selectbox('GPU',df['Gpu Brand'].unique())
 # os
 os = st.selectbox('OS',df['os'].unique())
 
-if st.button('Predict Price'):
+#if st.button('Predict Price'):
     # query
     #ppi = None
-    if touchscreen == 'Yes':
-        touchscreen = 1
-    else:
-        touchscreen = 0
+#    if touchscreen == 'Yes':
+#        touchscreen = 1
+#    else:
+#        touchscreen = 0
 
-    if ips == 'Yes':
-        ips = 1
-    else:
-        ips = 0
+#    if ips == 'Yes':
+#        ips = 1
+#    else:
+#        ips = 0
 
 # split nilai ppi dan query diubah ke integer
 X_res = int(resolution.split('x')[0])
