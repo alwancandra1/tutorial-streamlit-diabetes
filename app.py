@@ -21,10 +21,10 @@ ram = st.selectbox('RAM (in GB)',[2,4,6,8,12,16,24,32,64])
 weight = st.number_input('Weight')
 
 # Touchscreen
-touchscreen = st.selectbox('Touchscreen',['Yes','No'])
+touchscreen = st.selectbox('Touchscreen',['1','0'])
 
 # IPS
-ips = st.selectbox('IPS',['Yes','No'])
+ips = st.selectbox('IPS',['1','0'])
 
 # Screensize
 #screen_size = st.number_input('Screen Size')
