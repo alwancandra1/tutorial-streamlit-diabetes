@@ -68,5 +68,5 @@ ppi = ((X_res**2)+(Y_res**2))**0.5
 query = np.array([company,type,ram,weight,touchscreen,ips,cpu,hdd,ssd,gpu,os])
 
 # Prediksi Harga Laptop
-query = query.reshape(1,12)
+query = query.reshape(1,11)
 st.title("Predicted Price in Dollar : $ " + str(int(np.exp(pipe.predict(query)[0]))))
