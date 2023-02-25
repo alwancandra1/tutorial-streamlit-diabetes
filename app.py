@@ -63,8 +63,13 @@ if st.button('Predict Price'):
 # split nilai ppi dan query diubah ke integer
 X_res = int(resolution.split('x')[0])
 Y_res = int(resolution.split('x')[1])
-ppi = ((X_res**2)+(Y_res**2))**0.5/screen_size
-query = np.array([company,type,ram,weight,touchscreen,ips,ppi,cpu,hdd,ssd,gpu,os])
+xres=X_res**2
+yres=Y_res**2
+plus=xres+yres
+pangkat=plus**0.5
+total=pangkat/screen_size
+#ppi = ((X_res**2)+(Y_res**2))**0.5/screen_size
+query = np.array([company,type,ram,weight,touchscreen,ips,total,cpu,hdd,ssd,gpu,os])
 
 # Prediksi Harga Laptop
 query = query.reshape(1,12)
